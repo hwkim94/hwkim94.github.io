@@ -1,6 +1,6 @@
 ---
 layout: posts_by_category
-categories: image-detecton
-title: Image-detecton
+categories: image-detection
+title: Image-detection
 permalink: /category/image-detection
 ---
