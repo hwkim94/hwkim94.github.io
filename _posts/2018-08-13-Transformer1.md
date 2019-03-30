@@ -155,9 +155,8 @@ categories: [deeplearning, attention, nlp, transformer, paperreview]
 
 - 각 pos(단어의 위치)의 positional encoding이 모두 다름
     - $$(PE_{pos, 1}, PE_{pos, 2}, \cdots, PE_{pos, d_{model}})$$에서 각 elts 마다 가지는 파형이 다르기 때문에 각 pos마다 positional encoding이 다르게 표현됨
-    - 뿐만 아니라, 각 elts에 대한 파형이 다른 것이기 때문에 Linear Combination으로 표현할 수 없음. 즉, $$PE_{pos}$$에 어떠한 값을 곱하고 더해도 $$PE_{pos+k}$$를 만들 수 없기 때문에 위치 정보가 잘 보존됨
-    - FFN이 각 position에 대하여 같은 weight로 연산하는 이유가 position마다 다른 weight를 곱해주면 위치정보가 손실될 위험이 있기 때문이라고 생각
-
+    - $$PE_{pos}$$는 $$PE_{pos+k}$$ Linear Combination으로 표현할 수 있기 때문에 상대적인 위치에 의해 attention을 쉽게 학습
+    
 -----
 
 ## 5. Why Self-Attention
